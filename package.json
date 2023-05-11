@@ -1,0 +1,45 @@
+{
+  "name": "storybook-test",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npx enhance dev",
+    "lint": "eslint ./app/**/*.mjs --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@enhance/arc-plugin-enhance": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@enhance/cli": "^0.0.8",
+    "@enhance/types": "^0.6.0",
+    "@storybook/addon-essentials": "^7.0.10",
+    "@storybook/addon-links": "^7.0.10",
+    "@storybook/blocks": "^7.0.10",
+    "@storybook/web-components": "^7.0.10",
+    "@storybook/web-components-webpack5": "^7.0.10",
+    "eslint": "^8.30.0",
+    "lit": "^2.7.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.10"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2022
+    }
+  }
+}
