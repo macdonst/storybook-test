@@ -5,7 +5,7 @@ const html = enhance({
     'my-header': MyHeader
   }
 })
-import './generated.css'
+import '../.enhance/generated.css'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 export default {
