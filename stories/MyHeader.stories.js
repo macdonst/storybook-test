@@ -5,51 +5,31 @@ const html = enhance({
     'my-header': MyHeader
   }
 })
+import { enhanceArgs } from './helpers/enhance.js'
 import '../.enhance/generated.css'
 
 // More on how to set up stories at: https://storybook.js.org/docs/web-components/writing-stories/introduction
 export default {
   title: 'Example/MyHeader',
   tags: ['autodocs'],
-  render: (args) => MyHeader(args),
+  render: (args) => MyHeader(enhanceArgs(html, args)),
   argTypes: {
-    state: {
-      options: ['Bold', 'Quiet'],
-      mapping: {
-        Bold: {
-          attrs: {
-            variant: 'bold'
-          }
-        },
-        Quiet: {
-          attrs: {
-            variant: 'quiet'
-          }
-        },
-      },
-    }
+    variant: {
+      control: { type: 'select' },
+      options: ['bold', 'quiet'],
+    },
   },
-};
+}
 
 // More on writing stories with args: https://storybook.js.org/docs/web-components/writing-stories/args
 export const Bold = {
   args: {
-    html,
-    state: {
-      attrs: {
-        variant: 'bold'
-      }
-    }
+    variant: 'bold'
   },
-};
+}
 
 export const Quiet = {
   args: {
-    html,
-    state: {
-      attrs: {
-        variant: 'quiet'
-      }
-    }
+    variant: 'quiet'
   },
-};
+}

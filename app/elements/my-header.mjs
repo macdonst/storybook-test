@@ -5,7 +5,6 @@
 export default function MyHeader({ html, state }) {
   const { attrs } = state
   const { variant } = attrs
-  console.log(variant)
   const bold = variant === 'bold' ? 'font-bold' : 'font-hairline'
   return html`
     <header>
